@@ -27,7 +27,3 @@ inoremap <> <><Left>
 " When searching, zz will center the line of the search term.
 map N Nzz
 map n nzz
-
-" Save and run files with F5 key.
-autocmd FileType ruby nnoremap <buffer> <F5> :w<CR>:!ruby %<CR>
-autocmd FileType python nnoremap <buffer> <F5> :w<CR>:!python %<CR>
