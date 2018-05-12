@@ -27,3 +27,9 @@ inoremap <> <><Left>
 " When searching, zz will center the line of the search term.
 map N Nzz
 map n nzz
+
+" Window Pane Navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
