@@ -1,5 +1,7 @@
 colorscheme murphy
 
+set nocompatible   " No backwards compatibility with Vi
+set modeline       " Autodetect filetype based on shebang for extensionless files.
 set title
 set number         " Number lines
 set incsearch      " Incremental search
