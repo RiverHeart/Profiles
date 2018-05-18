@@ -1,7 +1,7 @@
 color slate
 inoremap \|\| \|\|<Left>
 
-# Save and run file.
+" Save and run file.
 nnoremap <F5> :w<CR>:!ruby %<CR>
 
 " This affects entire lines, not just selected columns. Working on something better.
