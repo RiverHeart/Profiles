@@ -18,6 +18,9 @@ function Get-Uptime {
     )
 }
 
+# Use Windows Subsystem for Linux to invoke Git
+function git { wsl git $args }
+
 import-module cowsay
 $env:fortune = "~\Documents\WindowsPowershell\modules\cowsay\fortunes.txt"
 fortune | cowsay
