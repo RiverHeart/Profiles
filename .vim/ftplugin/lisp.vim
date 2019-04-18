@@ -12,7 +12,7 @@ function NestExpression()
     if end_paren_pos[0] > 0
         execute "normal! a)"
     else
-        " We\'re not in a set of parentheses
+        " We're not in a set of parentheses
         return
     endif
 
