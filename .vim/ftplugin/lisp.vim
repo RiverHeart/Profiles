@@ -3,6 +3,9 @@ nmap <F6> :!clisp -i % <RETURN>
 imap ** **<LEFT>
 
 
+" Supposed to let you wrap an () expression
+" with an additional () so you can work from
+" the outside in.
 function NestExpression()
     " Get end paren pos
     " Returns [0, 0] if not in parens.
@@ -29,6 +32,8 @@ function NestExpression()
 endfunction
 
 
+" Add the item from the left of the current expression
+" into the expression
 function SlurpLeft()
     let save_cursor = getpos('.')
 
@@ -49,6 +54,7 @@ function SlurpLeft()
 endfunction
 
 
+" Expel the leftmost item from the current expression
 function BarfLeft()
     let save_cursor = getpos('.')
 
@@ -67,6 +73,8 @@ function BarfLeft()
 endfunction
 
 
+" Add the item from the right of the current expression
+" into the expression
 function SlurpRight()
     let save_cursor = getpos('.')
 
@@ -87,6 +95,7 @@ function SlurpRight()
 endfunction
 
 
+" Expel the rightmost item from the current expression
 function BarfRight()
     let save_cursor = getpos('.')
 
@@ -107,7 +116,8 @@ endfunction
 
 nmap fj :call NestExpression()<cr>
 
-" Angle bracket indicates direction to shift paren
+" Think of the shortcuts as in/out left/right
+" More convenient than angle brackets
 nmap i( :call SlurpLeft()<cr>
 nmap o( :call BarfLeft()<cr>
 nmap i) :call SlurpRight()<cr>
