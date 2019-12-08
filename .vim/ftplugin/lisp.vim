@@ -108,8 +108,6 @@ endfunction
 nmap fj :call NestExpression()<cr>
 
 " Angle bracket indicates direction to shift paren
-" Think of it as in/out. i/o are closer to parens
-" than angle brackets.
 nmap i( :call SlurpLeft()<cr>
 nmap o( :call BarfLeft()<cr>
 nmap i) :call SlurpRight()<cr>
